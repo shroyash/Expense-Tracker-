@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- expense Tracker  -->
     <div class="container">
         <h1>Expense Tracker</h1>
         <form id="expense-form">
@@ -17,48 +18,6 @@
         <ul id="expense-list"></ul>
         <h2>Total: $<span id="total-amount">0</span></h2>
     </div>
-    <script>
-        document.getElementById('expense-form').addEventListener('submit', addExpense);
-
-function addExpense(e) {
-    e.preventDefault();
-
-    const name = document.getElementById('expense-name').value;
-    const amount = document.getElementById('expense-amount').value;
-
-    if (name && amount) {
-        const expense = {
-            name,
-            amount: parseFloat(amount)
-        };
-
-        let expenses = JSON.parse(localStorage.getItem('expenses')) || [];
-        expenses.push(expense);
-        localStorage.setItem('expenses', JSON.stringify(expenses));
-
-        document.getElementById('expense-form').reset();
-        displayExpenses();
-    }
-}
-
-function displayExpenses() {
-    const expenseList = document.getElementById('expense-list');
-    expenseList.innerHTML = '';
-
-    let expenses = JSON.parse(localStorage.getItem('expenses')) || [];
-    let totalAmount = 0;
-
-    expenses.forEach(expense => {
-        const li = document.createElement('li');
-        li.textContent = `${expense.name}: $${expense.amount}`;
-        expenseList.appendChild(li);
-        totalAmount += expense.amount;
-    });
-
-    document.getElementById('total-amount').textContent = totalAmount.toFixed(2);
-}
-
-document.addEventListener('DOMContentLoaded', displayExpenses);
-    </script>
+    <script src="javascript/script.js"></script>
 </body>
 </html>
