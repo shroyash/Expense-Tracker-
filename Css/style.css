@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightgray;
+
+}
+/* heading and login css */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+.logo{
+    width: 40%;
+    margin-left: 0px;
+    padding: 60px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+   
+}
+.logo h1{
+    font-size: 1.4em;
+    color: azure;
+}
+.sub-heading{
+    color: #f06c14e8;
+}
+.navigation {
+    display: inline-block;
+    justify-content: space-around;
+    padding: 20px 0;
+    
+}
+.nav-button {
+    background: none;
+    border: none;
+    color: azure;
+    font-size: 23px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+.nav-button:hover {
+    color: #f06c14e8;
+}
+/* signin signup page css */
+.Registration{
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 0px;
+}
+.Registration button{
+    border-radius: 20px;
+}
+.form-container{
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background: #fefefe;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    background: #f8f8f8;
+}
+
+@media screen and (max-width: 660px){
+    body {
+        background-color: lightgray;
+    }
+    
+}
